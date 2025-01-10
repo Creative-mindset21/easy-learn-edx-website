@@ -41,6 +41,7 @@
   flex-basis: 40%;
 }
 
+/* !===== LARGE SCREENS ===== */
 @media (max-width: 1549px) {
   .left {
     flex-basis: 50%;
@@ -55,6 +56,7 @@
   }
 }
 
+/* !===== TABLETS ===== */
 @media (max-width: 1024px) {
   .hero {
     height: 80vh;
@@ -76,5 +78,20 @@
 
   .right {
     display: none;
+  }
+}
+
+/* !===== MOBILE PHONES ===== */
+@media (max-width: 559px) {
+  .hero {
+    height: 70vh;
+  }
+
+  .left > h1 {
+    font-size: 2.8rem;
+  }
+
+  .left > p {
+    font-size: 1.1rem;
   }
 }
