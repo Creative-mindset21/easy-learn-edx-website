@@ -1,11 +1,17 @@
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import css from "./Testimonials.module.css";
 import { testimonialsData } from "../../data";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Testimonials = () => {
   const [imageIndex, setImageIndex] = useState(0);
 
+  useEffect(() => {
+    const interval = setInterval(showNext, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
+  // ! ===== PREVIOUS IMAGE BUTTON =====
   function showPrevious() {
     setImageIndex(
       (prevIndex) =>
@@ -13,6 +19,7 @@ const Testimonials = () => {
     );
   }
 
+  // ! ===== NEXT IMAGE BUTTON =====
   function showNext() {
     setImageIndex((prevIndex) => (prevIndex + 1) % testimonialsData.length);
   }
@@ -38,7 +45,7 @@ const Testimonials = () => {
         {testimonialsData.map(
           (test, i) =>
             i === imageIndex && (
-              <div className={css.textBox} key={i}>
+              <div className={`${css.textBox}`} key={i}>
                 <img src={test.img} alt="" className={css.img} />
                 <div>
                   <h4>{test.title}</h4>

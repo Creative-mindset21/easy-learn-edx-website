@@ -46,7 +46,7 @@ export const testimonialsData = [
   {
     img: testimonial2,
     title:
-      "“Returning to education was intimidating, but the group sessions at Early Learn gave me the confidence to excel”",
+      "“Returning to education was intimidating, but the group sessions at Learn Easy gave me the confidence to excel”",
     name: "Esther Rowlins",
     occupation: "Product Manager",
   },
@@ -54,7 +54,7 @@ export const testimonialsData = [
   {
     img: testimonial3,
     title:
-      "“My daughter’s confidence in math skyrocketed after her one-to-one sessions! Early Learn truly understands personalized learning.”",
+      "“My daughter’s confidence in math skyrocketed after her one-to-one sessions! Learn Easy truly understands personalized learning.”",
     name: "Albert Flores",
     occupation: "Marketing Executive",
   },
@@ -62,7 +62,7 @@ export const testimonialsData = [
   {
     img: testimonial4,
     title:
-      "“Balancing work and my child’s education was tough until Early Learn’s flexible schedule saved the day. Highly recommend!”",
+      "“Balancing work and my child’s education was tough until Learn Easy flexible schedule saved the day. Highly recommend!”",
     name: "Theresa Webb",
     occupation: "Software Engineer",
   },
