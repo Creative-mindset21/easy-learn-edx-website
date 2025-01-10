@@ -1,0 +1,40 @@
+.hero {
+  display: flex;
+  width: 100%;
+  background-color: var(--dark-blue);
+  height: 100vh;
+  z-index: -1;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: flex-start;
+  flex-basis: 46%;
+  color: #fff;
+}
+
+.left > h1 {
+  font-size: 3.25rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.left > p {
+  line-height: 1.5;
+  max-width: 550px;
+  font-size: 1rem;
+}
+
+.heroBtn {
+  background-color: #fff;
+  color: var(--blue);
+  font-size: 1rem;
+}
+
+.right {
+  flex-basis: 40%;
+}

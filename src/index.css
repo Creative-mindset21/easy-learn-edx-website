@@ -14,17 +14,35 @@
 :root {
   /* ?===== COLORS ===== */
   --blue: #00008c;
+  --dark-blue: #00006b;
 }
 
 /* !===== GENERAL CSS ===== */
 body {
   font-family: "Inter", sans-serif;
+  background: #f0f8ff;
 }
 
 a {
   text-decoration: none;
 }
 
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
 #container {
-  padding: 2rem;
+  padding: 1.5rem 10%;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--blue);
+  border: none;
+  outline: none;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.8rem;
 }
