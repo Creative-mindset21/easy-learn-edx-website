@@ -1,0 +1,30 @@
+/* !===== GOOGLE FONTS LINKING ===== */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+/* !===== RESET TO DEFAULTS ===== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* !===== CUSTOM CSS ===== */
+:root {
+  /* ?===== COLORS ===== */
+  --blue: #00008c;
+}
+
+/* !===== GENERAL CSS ===== */
+body {
+  font-family: "Inter", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+#container {
+  padding: 2rem;
+}
