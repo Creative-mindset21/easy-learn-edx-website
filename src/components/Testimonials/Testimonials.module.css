@@ -1,0 +1,78 @@
+.testimonials {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1.5rem 13%;
+  transition: all 0.3s ease;
+}
+
+.left > h3 {
+  font-size: 3.5rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  max-width: 800px;
+  font-weight: 600;
+}
+
+.left span {
+  color: var(--dark-blue);
+}
+
+.btns {
+  display: flex;
+  gap: 1rem;
+}
+
+.btns > button {
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid #090b0e;
+  outline: none;
+  color: #3d4c5e;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  flex-basis: 30%;
+  width: 100%;
+  height: 100%;
+  gap: 2rem;
+}
+
+.textBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+.textBox > img {
+  width: 20rem;
+  height: 100%;
+  object-fit: contain;
+}
+
+.textBox > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.textBox > div h4 {
+  max-width: 450px;
+  color: #151a20;
+}
+
+.textBox > div p {
+  color: #546881;
+  font-size: 0.9rem;
+}
