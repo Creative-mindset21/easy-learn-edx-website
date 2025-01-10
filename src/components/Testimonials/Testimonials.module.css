@@ -115,3 +115,9 @@
     max-width: 350px;
   }
 }
+
+@media (max-width: 550px) {
+  .textBox > img {
+    width: 20rem;
+  }
+}
