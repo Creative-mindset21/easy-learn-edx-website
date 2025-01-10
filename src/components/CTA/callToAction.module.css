@@ -1,0 +1,18 @@
+.callAction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+  background: #e6e6ff;
+  margin-inline: auto;
+  padding: 5rem 3rem;
+}
+
+.callAction > h4 {
+  font-size: 2rem;
+}
+
+.btn {
+  font-size: 1.2rem;
+}

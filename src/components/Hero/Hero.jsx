@@ -4,7 +4,7 @@ import image1 from "../../assets/image1.svg";
 
 const Hero = () => {
   return (
-    <section className={css.hero} id="container">
+    <section className={css.hero}>
       <div className={css.left}>
         <h1>Personalized Learning, Tailored for Success</h1>
         <p>

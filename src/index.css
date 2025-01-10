@@ -37,7 +37,7 @@ img {
 }
 
 #container {
-  padding: 1.5rem 10%;
+  padding: 1.5rem 13%;
 }
 
 .btn {
@@ -49,4 +49,5 @@ img {
   border-radius: 5px;
   cursor: pointer;
   font-size: 0.8rem;
+  transition: all 0.3s ease;
 }

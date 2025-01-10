@@ -5,7 +5,9 @@
   height: 100vh;
   z-index: -1;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 5rem;
+  padding: 1.5rem 10%;
 }
 
 .left {
