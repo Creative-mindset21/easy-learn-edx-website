@@ -37,6 +37,12 @@ img {
   object-fit: cover;
 }
 
+button {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
 #container {
   padding: 1.5rem 13%;
 }

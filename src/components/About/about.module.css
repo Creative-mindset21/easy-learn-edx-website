@@ -16,7 +16,7 @@
 .aboutDetails {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 5rem;
   justify-content: center;
   margin-bottom: 2rem;
 }
@@ -71,7 +71,7 @@
   }
 }
 
-@media (max-width: 989px) {
+@media (max-width: 1024px) {
   .about h2 {
     font-size: 1.5rem;
   }

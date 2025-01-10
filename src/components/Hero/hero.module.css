@@ -55,7 +55,7 @@
   }
 }
 
-@media (max-width: 989px) {
+@media (max-width: 1024px) {
   .hero {
     height: 80vh;
   }

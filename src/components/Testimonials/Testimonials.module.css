@@ -92,7 +92,7 @@
   }
 }
 
-@media (max-width: 989px) {
+@media (max-width: 1024px) {
   .testimonials {
     flex-direction: column;
     gap: 4rem;
