@@ -5,6 +5,7 @@
   gap: 2rem;
   padding: 1.5rem 13%;
   transition: all 0.3s ease;
+  background-color: #fff;
 }
 
 .left > h3 {
@@ -74,4 +75,43 @@
 .textBox > div p {
   color: #546881;
   font-size: 0.9rem;
+  font-style: italic;
+}
+
+@media (max-width: 1549px) {
+  .left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .left > h3 {
+    font-size: 2.5rem;
+    max-width: 550px;
+  }
+}
+
+@media (max-width: 989px) {
+  .testimonials {
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .left > h3 {
+    font-size: 2rem;
+  }
+
+  .right {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .textBox > img {
+    width: 25rem;
+  }
+
+  .textBox > div h4 {
+    max-width: 350px;
+  }
 }
