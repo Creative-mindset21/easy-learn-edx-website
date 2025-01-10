@@ -40,3 +40,41 @@
 .right {
   flex-basis: 40%;
 }
+
+@media (max-width: 1549px) {
+  .left {
+    flex-basis: 50%;
+  }
+
+  .left > h1 {
+    font-size: 3.25rem;
+  }
+
+  .left > p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 989px) {
+  .hero {
+    height: 80vh;
+  }
+
+  .left {
+    align-items: center;
+    text-align: center;
+    flex-basis: 100%;
+  }
+
+  .left > h1 {
+    font-size: 4.5rem;
+  }
+
+  .left > p {
+    font-size: 1.5rem;
+  }
+
+  .right {
+    display: none;
+  }
+}
