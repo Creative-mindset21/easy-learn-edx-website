@@ -18,7 +18,7 @@
 }
 
 .left > h1 {
-  font-size: 3.25rem;
+  font-size: 4.25rem;
   font-weight: 600;
   line-height: 1.2;
 }
@@ -26,7 +26,7 @@
 .left > p {
   line-height: 1.5;
   max-width: 550px;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 .heroBtn {
