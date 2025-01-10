@@ -10,6 +10,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 1.1rem;
 }
 
 .logo {
@@ -20,7 +21,6 @@
 
 .logo > :first-child {
   color: var(--blue);
-  font-size: 1.3rem;
 }
 
 nav ul {
@@ -28,7 +28,6 @@ nav ul {
   align-items: center;
   justify-content: center;
   gap: 3rem;
-  font-size: 1.1rem;
 }
 
 nav ul li {
