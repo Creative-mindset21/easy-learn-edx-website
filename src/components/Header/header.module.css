@@ -1,12 +1,15 @@
 .header {
-  height: 5rem;
+  height: 4rem;
   background-color: #fff;
   width: 100%;
   z-index: 1;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
@@ -17,4 +20,36 @@
 
 .logo > :first-child {
   color: var(--blue);
+  font-size: 1.3rem;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  font-size: 1.1rem;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  color: #1d242d;
+}
+
+nav ul li:not(:last-child)::before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #1d242d;
+  height: 2px;
+  content: "";
+  width: 0;
+  transition: all 0.3s ease;
+}
+
+nav ul li:not(:last-child):hover::before {
+  width: 100%;
 }
