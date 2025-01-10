@@ -1,4 +1,5 @@
 import { NavLink, Outlet } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import css from "./header.module.css";
 
 const Header = () => {
@@ -12,10 +13,10 @@ const Header = () => {
         <nav>
           <ul>
             <li>
-              <NavLink to="#about">Benefits</NavLink>
+              <HashLink to="#about">Benefits</HashLink>
             </li>
             <li>
-              <NavLink to="#testimonies">Testimonials</NavLink>
+              <HashLink to="#testimonies">Testimonials</HashLink>
             </li>
             <li>
               <NavLink to="register" className="btn">

@@ -3,7 +3,7 @@ import css from "./about.module.css";
 
 const About = () => {
   return (
-    <section className={css.about}>
+    <section className={css.about} id="about">
       <h2>
         Why Families Trust <span className={css.span}>Early Learn </span>for
         Academic Success
