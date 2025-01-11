@@ -1,0 +1,22 @@
+.formHeader {
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  justify-content: space-between;
+  padding: 3% 2.5rem;
+  font-size: 0.8rem;
+}
+
+.back,
+.pageNumber {
+  color: #151a20;
+}
+
+.back {
+  align-items: center;
+  display: flex;
+}
+
+.text {
+  color: #546881;
+}
