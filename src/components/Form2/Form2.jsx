@@ -1,6 +1,8 @@
+import FormHeader from "../FormHeader/FormHeader";
 import css from "./form2.module.css";
 
 const Form2 = ({ formData, setFormData, nextPage, currentPage, prevPage }) => {
+  console.log(formData);
   const handleInterestedCourses = (e) => {
     const { value, checked } = e.target;
     if (checked) {
@@ -24,6 +26,7 @@ const Form2 = ({ formData, setFormData, nextPage, currentPage, prevPage }) => {
 
   return (
     <>
+      <FormHeader />
       <section className="forms">
         <div className="container">
           <form

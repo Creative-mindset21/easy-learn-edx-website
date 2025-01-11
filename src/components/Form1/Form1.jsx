@@ -2,8 +2,15 @@ import FormHeader from "../FormHeader/FormHeader";
 import css from "./form1.module.css";
 
 const Form1 = ({ formData, setFormData, nextPage, currentPage }) => {
+  console.log(formData);
+
   const handleGender = (e) => {
     setFormData((prev) => ({ ...prev, sex: e.target.value }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    nextPage();
   };
 
   return (
@@ -12,14 +19,7 @@ const Form1 = ({ formData, setFormData, nextPage, currentPage }) => {
 
       <section className="forms">
         <div className="container">
-          <form
-            action=""
-            className="form"
-            onSubmit={(e) => {
-              e.preventDefault;
-              nextPage();
-            }}
-          >
+          <form action="" className="form" onSubmit={handleSubmit}>
             {/* ========== NAMES ==========  */}
             <div className={css.name}>
               <h2 className="head">
