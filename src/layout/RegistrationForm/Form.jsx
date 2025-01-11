@@ -3,7 +3,6 @@ import Form1 from "../../components/Form1/Form1";
 import Form2 from "../../components/Form2/Form2";
 import Form3 from "../../components/Form3/Form3";
 import Form4 from "../../components/Form4/Form4";
-import FormHeader from "../../components/FormHeader/FormHeader";
 
 const Form = () => {
   const [currentPage, setCurrentPage] = useState(0);
@@ -37,7 +36,12 @@ const Form = () => {
   };
 
   const pages = [
-    <Form1 formData={formData} setFormData={setFormData} nextPage={nextPage} />,
+    <Form1
+      formData={formData}
+      setFormData={setFormData}
+      nextPage={nextPage}
+      currentPage={currentPage}
+    />,
 
     <Form2
       formData={formData}
@@ -56,7 +60,7 @@ const Form = () => {
     <Form4 formData={formData} prevPage={prevPage} />,
   ];
 
-  return <FormHeader />;
+  return <div>{pages[currentPage]}</div>;
 };
 
 export default Form;

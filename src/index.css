@@ -58,3 +58,44 @@ button {
   font-size: 0.8rem;
   transition: all 0.3s ease;
 }
+
+/* !========== REGISTRATION SECTION ========== */
+.next-btn {
+  padding: 1rem;
+  background: var(--blue);
+  color: #f0f8ff;
+  font-size: 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.forms {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: #fff;
+  padding: 2.5rem;
+  border-radius: 24px;
+  width: 23.5rem;
+  max-width: 100%;
+}
+
+.head {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #090b0e;
+}
+
+.head > span {
+  color: #909dad;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
