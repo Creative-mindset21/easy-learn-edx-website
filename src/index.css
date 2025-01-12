@@ -109,3 +109,7 @@ textarea {
   gap: 1rem;
   justify-content: space-between;
 }
+
+input::placeholder {
+  font-size: 1rem;
+}
