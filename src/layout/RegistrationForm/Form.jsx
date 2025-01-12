@@ -57,7 +57,7 @@ const Form = () => {
       prevPage={prevPage}
     />,
 
-    <Form4 formData={formData} prevPage={prevPage} />,
+    <Form4 formData={formData} prevPage={prevPage} setFormData={setFormData} />,
   ];
 
   return <div>{pages[currentPage]}</div>;

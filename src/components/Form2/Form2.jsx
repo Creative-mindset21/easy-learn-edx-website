@@ -1,8 +1,12 @@
+import { useState } from "react";
 import FormHeader from "../FormHeader/FormHeader";
 import css from "./form2.module.css";
+import moment from "moment";
 
-const Form2 = ({ formData, setFormData, nextPage, currentPage, prevPage }) => {
-  console.log(formData);
+const Form2 = ({ formData, setFormData, nextPage, prevPage }) => {
+  const [error, setError] = useState("");
+
+  //! ===== HANDLE INTERESTED COURSES SECTION ===== //
   const handleInterestedCourses = (e) => {
     const { value, checked } = e.target;
     if (checked) {
@@ -20,27 +24,36 @@ const Form2 = ({ formData, setFormData, nextPage, currentPage, prevPage }) => {
     }
   };
 
+  //! ===== HANDLE EXAM BOARD SECTION ===== //
   const handleExamBoard = (e) => {
     setFormData((prev) => ({ ...prev, examinationBoards: e.target.value }));
+  };
+
+  //! ===== HANDLE SUBMIT ===== //
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    //? ===== CHECK IF INTERESTED COURSE IS SELECTED ===== //
+    if (formData.interestedCourses.length === 0) {
+      setError("Please select at least a course");
+    } else {
+      setError("");
+      nextPage();
+    }
   };
 
   return (
     <>
       <FormHeader />
+
       <section className="forms">
         <div className="container">
-          <form
-            action=""
-            className="form"
-            onSubmit={(e) => {
-              e.preventDefault;
-              nextPage();
-            }}
-          >
+          <form action="" className="form" onSubmit={handleSubmit}>
             {/* ========== SCHOOL YEAR GROUP ==========  */}
             <div className={css.yearGroup}>
               <h2 className="head">
-                School Year Group (In September 2024) <span>*</span>
+                School Year Group ({`In September ${moment().format("YYYY")}`}){" "}
+                <span>*</span>
               </h2>
 
               <fieldset>
@@ -57,7 +70,11 @@ const Form2 = ({ formData, setFormData, nextPage, currentPage, prevPage }) => {
                       schoolYearGroup: e.target.value,
                     }))
                   }
+                  required
                 >
+                  <option value="" disabled>
+                    Select a Year Group
+                  </option>
                   <option value="year 2">Year 2</option>
                   <option value="year 3">Year 3</option>
                   <option value="year 4">Year 4</option>
@@ -87,6 +104,7 @@ const Form2 = ({ formData, setFormData, nextPage, currentPage, prevPage }) => {
                       schoolName: e.target.value,
                     }))
                   }
+                  required
                 />
               </fieldset>
             </div>
@@ -96,6 +114,8 @@ const Form2 = ({ formData, setFormData, nextPage, currentPage, prevPage }) => {
               <h2 className="head">
                 Interested Courses <span>*</span>
               </h2>
+
+              {error && <p style={{ color: "red" }}>{error}</p>}
 
               <label htmlFor="maths">
                 <input
@@ -146,6 +166,7 @@ const Form2 = ({ formData, setFormData, nextPage, currentPage, prevPage }) => {
                   value="aqa"
                   checked={formData.examinationBoards === "aqa"}
                   onChange={handleExamBoard}
+                  required
                 />
                 <span>AQA</span>
               </label>
@@ -187,9 +208,15 @@ const Form2 = ({ formData, setFormData, nextPage, currentPage, prevPage }) => {
               </label>
             </div>
 
-            <button type="submit" className="next-btn">
-              Next: Enter School Details
-            </button>
+            <div className="btns">
+              <button className="next-btn" onClick={prevPage}>
+                Previous
+              </button>
+
+              <button type="submit" className="next-btn">
+                Next
+              </button>
+            </div>
           </form>
         </div>
       </section>

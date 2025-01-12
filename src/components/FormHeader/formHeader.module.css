@@ -1,7 +1,5 @@
 .formHeader {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  text-align: center;
   padding: 3% 2.5rem;
   font-size: 0.8rem;
   position: absolute;

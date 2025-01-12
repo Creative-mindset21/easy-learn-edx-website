@@ -1,0 +1,29 @@
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+fieldset {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+fieldset > legend {
+  font-size: 0.8rem;
+}
+
+input[type="number"],
+input[type="email"] {
+  background: transparent;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+/** ===== REMOVE THE ARROWS IN THE INPUT NUMBER ===== */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

@@ -1,0 +1,33 @@
+textarea {
+  width: 100%;
+  height: 10rem;
+  resize: none;
+}
+
+fieldset {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+fieldset > legend {
+  font-size: 0.8rem;
+}
+
+.details,
+.specialEducationNeeds {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.cityPostalCode {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.specialEducationNeeds > label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}

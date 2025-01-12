@@ -1,13 +1,13 @@
 import FormHeader from "../FormHeader/FormHeader";
 import css from "./form1.module.css";
 
-const Form1 = ({ formData, setFormData, nextPage, currentPage }) => {
-  console.log(formData);
-
+const Form1 = ({ formData, setFormData, nextPage }) => {
+  //! ===== HANDLE GENDER RADIO BUTTONS ===== //
   const handleGender = (e) => {
     setFormData((prev) => ({ ...prev, sex: e.target.value }));
   };
 
+  //! ===== HANDLE NEXT PAGE BUTTONS ===== //
   const handleSubmit = (e) => {
     e.preventDefault();
     nextPage();
@@ -42,6 +42,7 @@ const Form1 = ({ formData, setFormData, nextPage, currentPage }) => {
                       firstName: e.target.value,
                     }))
                   }
+                  required
                 />
               </fieldset>
 
@@ -61,11 +62,10 @@ const Form1 = ({ formData, setFormData, nextPage, currentPage }) => {
                       lastName: e.target.value,
                     }))
                   }
+                  required
                 />
               </fieldset>
             </div>
-
-            {/* ========== NAMES ==========  */}
 
             {/* ========== GENDER ==========  */}
             <div className={css.gender}>
@@ -93,6 +93,7 @@ const Form1 = ({ formData, setFormData, nextPage, currentPage }) => {
                   value="female"
                   checked={formData.sex === "female"}
                   onChange={handleGender}
+                  required
                 />
                 <span>Female</span>
               </label>
@@ -109,7 +110,6 @@ const Form1 = ({ formData, setFormData, nextPage, currentPage }) => {
                 <span>Other</span>
               </label>
             </div>
-            {/* ========== GENDER ==========  */}
 
             {/* ========== DATE OF BIRTH ==========  */}
             <div className={css.dob}>
@@ -131,12 +131,13 @@ const Form1 = ({ formData, setFormData, nextPage, currentPage }) => {
                       dob: e.target.value,
                     }))
                   }
+                  required
                 />
               </fieldset>
             </div>
 
             <button type="submit" className="next-btn">
-              Next: Enter School Details
+              Next
             </button>
           </form>
         </div>
