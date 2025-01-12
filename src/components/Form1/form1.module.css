@@ -9,6 +9,7 @@ input[type="date"] {
 input[type="date"] {
   font-family: inherit;
   width: 100%;
+  font-size: 1.1rem;
 }
 
 .name,
@@ -16,7 +17,7 @@ input[type="date"] {
 .dob {
   display: flex;
   flex-direction: column;
-  gap: 1.1rem;
+  gap: 0.5rem;
 }
 
 fieldset {

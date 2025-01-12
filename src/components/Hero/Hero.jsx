@@ -7,13 +7,15 @@ const Hero = () => {
     <section className={css.hero}>
       <div className={css.left}>
         <h1>Personalized Learning, Tailored for Success</h1>
-        <p>
-          Empower your child’s education with expert tutors and flexible options
-          tailored to your schedule.
-        </p>
-        <NavLink to="register" className={`${css.heroBtn} btn`}>
-          Get Started Today
-        </NavLink>
+        <div>
+          <p>
+            Empower your child’s education with expert tutors and flexible
+            options tailored to your schedule.
+          </p>
+          <NavLink to="register" className={`${css.heroBtn} btn`}>
+            Get Started Today
+          </NavLink>
+        </div>
       </div>
 
       <div className={css.right}>

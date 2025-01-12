@@ -13,10 +13,17 @@
 .left {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
   align-items: flex-start;
   flex-basis: 46%;
   color: #fff;
+}
+
+.left > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
 }
 
 .left > h1 {
@@ -25,7 +32,7 @@
   line-height: 1.2;
 }
 
-.left > p {
+.left > div p {
   line-height: 1.5;
   max-width: 550px;
   font-size: 1.5rem;
@@ -51,7 +58,7 @@
     font-size: 3.25rem;
   }
 
-  .left > p {
+  .left > div p {
     font-size: 1.2rem;
   }
 }
@@ -72,7 +79,7 @@
     font-size: 4.5rem;
   }
 
-  .left > p {
+  .left > div p {
     font-size: 1.5rem;
   }
 
@@ -84,14 +91,14 @@
 /* !===== MOBILE PHONES ===== */
 @media (max-width: 559px) {
   .hero {
-    height: 70vh;
+    height: 75vh;
   }
 
   .left > h1 {
     font-size: 2.8rem;
   }
 
-  .left > p {
+  .left > div p {
     font-size: 1.1rem;
   }
 }
