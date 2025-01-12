@@ -71,9 +71,14 @@ textarea {
   cursor: pointer;
 }
 
+select {
+  font-size: 0.9rem;
+}
+
 .forms {
-  display: grid;
-  place-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   min-height: 100vh;
   width: 100%;
 }
