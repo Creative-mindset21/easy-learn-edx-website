@@ -8,6 +8,14 @@ import testimonial2 from "../assets/testimonial images02.svg";
 import testimonial3 from "../assets/testimonial images03.svg";
 import testimonial4 from "../assets/testimonial images04.svg";
 
+import pricingImg1 from "../assets/pricing2.jpg";
+import pricingImg2 from "../assets/pricing4.jpg";
+import pricingImg3 from "../assets/pricing7.jpg";
+import pricingImg4 from "../assets/pricing6.jpg";
+import pricingImg5 from "../assets/pricing5.jpg";
+import pricingImg6 from "../assets/pricing3.jpg";
+import pricingImg7 from "../assets/pricing1.webp";
+
 export const aboutData = [
   {
     img: blob1,
@@ -65,5 +73,65 @@ export const testimonialsData = [
       "“Balancing work and my child’s education was tough until Learn Easy flexible schedule saved the day. Highly recommend!”",
     name: "Theresa Webb",
     occupation: "Software Engineer",
+  },
+];
+
+export const pricingData = [
+  {
+    img: pricingImg1,
+    title: "KS1 & KS2",
+    desc: "Personalized learning tailored to your child’s needs.",
+    pricing: 15,
+    enrolledPeople: "30+ students enrolled",
+  },
+
+  {
+    img: pricingImg2,
+    title: "KS3",
+    desc: "Personalized learning tailored to your child’s needs.",
+    pricing: 20,
+    enrolledPeople: "10+ students enrolled",
+  },
+
+  {
+    img: pricingImg3,
+    title: "KS4",
+    desc: "Personalized learning tailored to your child’s needs.",
+    pricing: 25,
+    enrolledPeople: "20+ students enrolled",
+  },
+
+  {
+    img: pricingImg4,
+    title: "Adult Functional Skills",
+    desc: "One-to-One Functional Skills for Adults",
+    pricing: 15,
+    enrolledPeople: "20+ students enrolled",
+  },
+];
+
+export const groupLearningData = [
+  {
+    img: pricingImg5,
+    title: "KS1 - Group of 4",
+    desc: "Collaborate with peers for an engaging group learning experience",
+    pricing: 5,
+    enrolledPeople: "7 active groups",
+  },
+
+  {
+    img: pricingImg6,
+    title: "KS3 - Group of 4",
+    desc: "Collaborate with peers for an engaging group learning experience",
+    pricing: 5,
+    enrolledPeople: "3 active groups",
+  },
+
+  {
+    img: pricingImg7,
+    title: "KS4 - Group of 4",
+    desc: "Collaborate with peers for an engaging group learning experience",
+    pricing: 8,
+    enrolledPeople: "5 active groups",
   },
 ];

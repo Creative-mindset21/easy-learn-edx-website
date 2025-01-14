@@ -1,0 +1,94 @@
+.hero {
+  display: flex;
+  width: 100%;
+  background-color: var(--light-blue);
+  height: 70vh;
+  z-index: -1;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5rem;
+  padding: 0 13%;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-start;
+  flex-basis: 50%;
+  color: #000;
+}
+
+.left > span {
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.left > h1 {
+  font-size: 4.25rem;
+  font-weight: 600;
+}
+
+.left > div p {
+  line-height: 1.5;
+  max-width: 550px;
+  font-size: 1.5rem;
+}
+
+/* !===== LARGE SCREENS ===== */
+@media (max-width: 1549px) {
+  .left {
+    flex-basis: 50%;
+  }
+
+  .left > h1 {
+    font-size: 3.25rem;
+  }
+
+  .left > div p {
+    font-size: 1.2rem;
+  }
+}
+
+/* !===== TABLETS ===== */
+@media (max-width: 1024px) {
+  .hero {
+    height: 80vh;
+  }
+
+  .left {
+    align-items: center;
+    text-align: center;
+    flex-basis: 100%;
+  }
+
+  .left > h1 {
+    font-size: 4.5rem;
+  }
+
+  .left > div p {
+    font-size: 1.5rem;
+  }
+
+  .right {
+    display: none;
+  }
+}
+
+/* !===== MOBILE PHONES ===== */
+@media (max-width: 559px) {
+  .hero {
+    height: 65vh;
+  }
+
+  .left > h1 {
+    font-size: 2.8rem;
+  }
+
+  .left > div p {
+    font-size: 1.1rem;
+  }
+}

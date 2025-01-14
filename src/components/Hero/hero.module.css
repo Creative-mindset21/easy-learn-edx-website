@@ -22,7 +22,7 @@
 .left > div {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   gap: 0.7rem;
 }
 
@@ -91,11 +91,19 @@
 /* !===== MOBILE PHONES ===== */
 @media (max-width: 559px) {
   .hero {
-    height: 75vh;
+    height: 60vh;
+    align-items: start;
+    padding: 35% 10%;
+  }
+
+  .left {
+    align-items: flex-start;
+    text-align: left;
+    gap: 1.5rem;
   }
 
   .left > h1 {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
   }
 
   .left > div p {
