@@ -91,7 +91,7 @@
 /* !===== MOBILE PHONES ===== */
 @media (max-width: 559px) {
   .hero {
-    height: 60vh;
+    height: 75vh;
     align-items: start;
     padding: 35% 10%;
   }
