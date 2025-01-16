@@ -1,7 +1,15 @@
+/* eslint-disable react/react-in-jsx-scope */
 import { groupLearningData, pricingData } from "../../data";
+import { useState } from "react";
 import css from "./prices.module.css";
 
 const Prices = () => {
+  const [selectedPrice, setSelectedPrice] = useState(null);
+
+  const handleSelectCourse = (price) => {
+    setSelectedPrice(price);
+  };
+
   return (
     <section className={css.prices} id="container">
       <div className={css.oneToOne} id="oneToOne">
@@ -29,7 +37,12 @@ const Prices = () => {
               </div>
 
               <div>
-                <button className="btn">Select Course</button>
+                <button
+                  className="btn"
+                  onClick={() => handleSelectCourse(price)}
+                >
+                  Select Course
+                </button>
               </div>
             </div>
           ))}
@@ -61,11 +74,39 @@ const Prices = () => {
               </div>
 
               <div>
-                <button className="btn">Select Course</button>
+                <button
+                  className="btn"
+                  onClick={() => handleSelectCourse(price)}
+                >
+                  Select Course
+                </button>
               </div>
             </div>
           ))}
         </div>
+      </div>
+
+      {/* Payment Section */}
+      <div className={css.card}>
+        {selectedPrice && (
+          <div className={css.box}>
+            <img
+              src={selectedPrice.img}
+              alt={`Price image of the pricing box `}
+            />
+
+            <div>
+              <h3>{selectedPrice.title}</h3>
+              <p>{selectedPrice.desc}</p>
+            </div>
+
+            <div>
+              <h4>{`£${selectedPrice.pricing}/hour`}</h4>
+            </div>
+
+            <button className="btn">Proceed to Payment</button>
+          </div>
+        )}
       </div>
     </section>
   );
