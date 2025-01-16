@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable react/react-in-jsx-scope */
 import { useState } from "react";
 import css from "./form4.module.css";
@@ -7,9 +8,11 @@ import { useNavigate } from "react-router-dom";
 const Form4 = ({ formData, prevPage, setFormData }) => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(false); // Loading state for form submission
 
   //! ===== HANDLE FORM SUBMIT ===== //
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
+    console.log(formData);
     e.preventDefault();
 
     if (
@@ -19,9 +22,79 @@ const Form4 = ({ formData, prevPage, setFormData }) => {
       setError("Please enter a comment");
     } else {
       setError("");
-      console.log("Form submitted:", formData);
-
       navigate("/pricing");
+
+      // Set loading state to true before submitting the form
+      setLoading(true);
+
+      try {
+        // Make API call by sending individual fields one by one in the body
+        const response = await fetch(
+          "https://edubackend-zs7x.onrender.com/v1/create-student",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              first_name: formData.firstName,
+              last_name: formData.lastName,
+              sex: formData.sex,
+              dob: formData.dob, // Make sure dob is formatted as a string in 'YYYY-MM-DD'
+              school_year_group: formData.schoolYearGroup,
+              school_name: formData.schoolName,
+              interested_courses: formData.interestedCourses || null, // Optional
+              examination_boards: formData.examinationBoards || null, // Optional
+              parent_first_name: formData.parentFirstName,
+              parent_last_name: formData.parentLastName,
+              parent_phone_number: formData.parentPhoneNumber,
+              parent_email_address: formData.parentEmailAddress,
+              ethnic_background: formData.ethnicBackground || null, // Optional
+              home_address: formData.homeAddress || null, // Optional
+              city_town: formData.cityTown,
+              postal_code: formData.postalCode,
+              special_education_needs: formData.specialEducationNeeds || null, // Optional
+              special_education_needs_comments:
+                formData.specialEducationNeedsComments || null, // Optional
+            }),
+          }
+        );
+
+        if (!response.ok) {
+          throw new Error("Form submission failed. Please try again.");
+        }
+
+        // Handle successful form submission
+        const result = await response.json();
+        console.log("Form submitted successfully:", result);
+
+        // Optionally reset form data after successful submission
+        setFormData({
+          firstName: "",
+          lastName: "",
+          sex: "",
+          dob: "",
+          schoolYearGroup: "",
+          schoolName: "",
+          interestedCourses: "",
+          examinationBoards: "",
+          parentFirstName: "",
+          parentLastName: "",
+          parentPhoneNumber: "",
+          parentEmailAddress: "",
+          ethnicBackground: "",
+          homeAddress: "",
+          cityTown: "",
+          postalCode: "",
+          specialEducationNeeds: "",
+          specialEducationNeedsComments: "",
+        });
+      } catch (error) {
+        setError("An error occurred. Please try again.");
+        console.error("Error submitting form:", error);
+      } finally {
+        setLoading(false); // Reset loading state after request completion
+      }
     }
   };
 
@@ -36,7 +109,7 @@ const Form4 = ({ formData, prevPage, setFormData }) => {
 
       <section className="forms">
         <div className="container">
-          <form action="" className="form" onSubmit={handleSubmit}>
+          <form className="form" onSubmit={handleSubmit}>
             <div className={css.details}>
               <h2 className="head">Location</h2>
 
@@ -82,7 +155,6 @@ const Form4 = ({ formData, prevPage, setFormData }) => {
                   />
                 </fieldset>
 
-                {/* ========== POSTAL CODE ==========  */}
                 <fieldset>
                   <legend>
                     <label htmlFor="postalCode">Postal Code</label>
@@ -160,8 +232,8 @@ const Form4 = ({ formData, prevPage, setFormData }) => {
                 Previous
               </button>
 
-              <button type="submit" className="next-btn">
-                Complete Registration
+              <button type="submit" className="next-btn" disabled={loading}>
+                {loading ? "Submitting..." : "Complete Registration"}
               </button>
             </div>
           </form>
