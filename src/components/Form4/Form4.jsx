@@ -98,7 +98,7 @@ const Form4 = ({ formData, prevPage, setFormData }) => {
     }
   };
 
-  //! ===== HANDLE SEPCIAL NEEDS ===== //
+  //! ===== HANDLE SPECIAL NEEDS ===== //
   const handleSpecialNeeds = (e) => {
     setFormData((prev) => ({ ...prev, specialEducationNeeds: e.target.value }));
   };

@@ -1,3 +1,45 @@
+.paymentContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.paymentType {
+  flex-basis: 30%;
+}
+
+.paymentType > h2,
+.paymentType > p {
+  color: #1d242d;
+}
+
+.paymentType > h2 {
+  font-size: 1.975rem;
+  margin-bottom: 0.5rem;
+}
+
+.paymentType > p {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.cardDetails,
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.form div {
+  display: flex;
+  gap: 1rem;
+}
+
+.expiration {
+  display: flex;
+}
+
 .card {
   display: flex;
   flex-wrap: wrap;
