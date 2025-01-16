@@ -1,0 +1,108 @@
+.header {
+  height: 4rem;
+  background-color: #fff;
+  width: 100%;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1rem;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo > :first-child {
+  color: var(--blue);
+}
+
+.nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.nav ul li {
+  position: relative;
+}
+
+.nav ul li:not(:last-child)::before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #1d242d;
+  height: 2px;
+  content: "";
+  width: 0;
+  transition: all 0.3s ease;
+}
+
+.nav ul li a {
+  color: #1d242d;
+}
+
+.nav ul li:last-child a {
+  color: #fff;
+}
+
+.nav ul li:not(:last-child):hover::before {
+  width: 100%;
+}
+
+.menuBtn,
+.closeBtn {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .nav {
+    position: absolute;
+    top: 4rem;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    height: 100vh;
+    padding: 15% 10%;
+    transition: all 0.4s ease;
+  }
+
+  .nav.navOpen {
+    left: 0;
+  }
+
+  .nav.navClose {
+    left: -99%;
+  }
+
+  .nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav ul li a {
+    font-size: 1rem;
+  }
+
+  .menuBtn {
+    display: block;
+    font-size: 1.5rem;
+  }
+
+  .closeBtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    font-size: 1.5rem;
+    display: block;
+  }
+}

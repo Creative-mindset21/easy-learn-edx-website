@@ -2,12 +2,15 @@
 import { groupLearningData, pricingData } from "../../data";
 import { useState } from "react";
 import css from "./prices.module.css";
+import { useNavigate } from "react-router-dom";
 
 const Prices = () => {
+  const navigate = useNavigate(); // Initialize useNavigate
   const [selectedPrice, setSelectedPrice] = useState(null);
 
   const handleSelectCourse = (price) => {
     setSelectedPrice(price);
+    navigate("/payment", { state: { selectedPrice: price } }); // Navigate to payment page with state
   };
 
   return (
@@ -84,29 +87,6 @@ const Prices = () => {
             </div>
           ))}
         </div>
-      </div>
-
-      {/* Payment Section */}
-      <div className={css.card}>
-        {selectedPrice && (
-          <div className={css.box}>
-            <img
-              src={selectedPrice.img}
-              alt={`Price image of the pricing box `}
-            />
-
-            <div>
-              <h3>{selectedPrice.title}</h3>
-              <p>{selectedPrice.desc}</p>
-            </div>
-
-            <div>
-              <h4>{`£${selectedPrice.pricing}/hour`}</h4>
-            </div>
-
-            <button className="btn">Proceed to Payment</button>
-          </div>
-        )}
       </div>
     </section>
   );

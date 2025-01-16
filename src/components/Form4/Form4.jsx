@@ -1,9 +1,13 @@
+/* eslint-disable react/react-in-jsx-scope */
 import { useState } from "react";
 import css from "./form4.module.css";
 import FormHeader from "../FormHeader/FormHeader";
+import { useNavigate } from "react-router-dom";
 
 const Form4 = ({ formData, prevPage, setFormData }) => {
   const [error, setError] = useState("");
+  const navigate = useNavigate();
+
   //! ===== HANDLE FORM SUBMIT ===== //
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -16,6 +20,8 @@ const Form4 = ({ formData, prevPage, setFormData }) => {
     } else {
       setError("");
       console.log("Form submitted:", formData);
+
+      navigate("/pricing");
     }
   };
 
