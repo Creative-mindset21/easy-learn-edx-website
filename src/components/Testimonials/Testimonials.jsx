@@ -1,3 +1,4 @@
+import React from "react";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import css from "./Testimonials.module.css";
 import { testimonialsData } from "../../data";
@@ -46,7 +47,6 @@ const Testimonials = () => {
           (test, i) =>
             i === imageIndex && (
               <div className={`${css.textBox}`} key={i}>
-                <img src={test.img} alt="" className={css.img} />
                 <div>
                   <h4>{test.title}</h4>
                   <p>{test.name}</p>

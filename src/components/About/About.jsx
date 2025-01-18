@@ -1,4 +1,5 @@
 import { aboutData } from "../../data";
+import React from "react";
 import css from "./about.module.css";
 
 const About = () => {

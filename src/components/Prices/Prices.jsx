@@ -1,8 +1,12 @@
-/* eslint-disable react/react-in-jsx-scope */
+import React from "react";
 import { groupLearningData, pricingData } from "../../data";
 import { useState } from "react";
 import css from "./prices.module.css";
 import { useNavigate } from "react-router-dom";
+
+import pricingImg1 from "../../assets/pricing2.jpg";
+import pricingImg2 from "../../assets/pricing4.jpg";
+import pricingImg3 from "../../assets/pricing7.jpg";
 
 const Prices = () => {
   const navigate = useNavigate(); // Initialize useNavigate
@@ -39,6 +43,13 @@ const Prices = () => {
                 <h4>{`£${price.pricing}/hour`}</h4>
               </div>
 
+              <div className={css.imgs}>
+                <img src={pricingImg1} alt="Image 1" />
+                <img src={pricingImg2} alt="Image 2" />
+                <img src={pricingImg3} alt="Image 3" />
+                <span>{price.enrolledPeople}</span>
+              </div>
+
               <div>
                 <button
                   className="btn"
@@ -73,7 +84,14 @@ const Prices = () => {
               </div>
 
               <div>
-                <h4>{`£${price.pricing}/hour`}</h4>
+                <h4>{`£${price.pricing}/hour per student`}</h4>
+              </div>
+
+              <div className={css.imgs}>
+                <img src={pricingImg1} alt="Image 1" />
+                <img src={pricingImg2} alt="Image 2" />
+                <img src={pricingImg3} alt="Image 3" />
+                <span>{price.enrolledPeople}</span>
               </div>
 
               <div>

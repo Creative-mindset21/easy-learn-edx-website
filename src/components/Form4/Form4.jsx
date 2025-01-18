@@ -12,7 +12,6 @@ const Form4 = ({ formData, prevPage, setFormData }) => {
 
   //! ===== HANDLE FORM SUBMIT ===== //
   const handleSubmit = async (e) => {
-    console.log(formData);
     e.preventDefault();
 
     if (

@@ -1,7 +1,10 @@
+import React from "react";
 import { useLocation } from "react-router-dom";
 import css from "./Payment.module.css";
+import pricingImg1 from "../../assets/pricing2.jpg";
+import pricingImg2 from "../../assets/pricing4.jpg";
+import pricingImg3 from "../../assets/pricing7.jpg";
 
-/* eslint-disable react/react-in-jsx-scope */
 const Payment = () => {
   const location = useLocation();
   const { selectedPrice } = location.state || {};
@@ -25,6 +28,7 @@ const Payment = () => {
               <input
                 type="text"
                 placeholder="Enter your 16-digit card number"
+                required
               />
             </fieldset>
 
@@ -38,7 +42,9 @@ const Payment = () => {
                   maxLength="2"
                   size="2"
                 />
-                <span>/</span>
+
+                <p>/</p>
+
                 <input
                   type="text"
                   name="year"
@@ -53,6 +59,10 @@ const Payment = () => {
                 <input type="text" placeholder="***" maxLength="3" />
               </fieldset>
             </div>
+
+            <button className={`${css.proceedBtn} btn`}>
+              {`Pay £${selectedPrice.pricing} now`}
+            </button>
           </form>
         </div>
       </div>
@@ -71,10 +81,15 @@ const Payment = () => {
             </div>
 
             <div>
-              <h4>{`£${selectedPrice.pricing}/hour`}</h4>
+              <h4>{`£${selectedPrice.pricing}/hour per student`}</h4>
             </div>
 
-            <button className="btn">Proceed to Payment</button>
+            <div className={css.imgs}>
+              <img src={pricingImg1} alt="Image 1" />
+              <img src={pricingImg2} alt="Image 2" />
+              <img src={pricingImg3} alt="Image 3" />
+              <span>{selectedPrice.enrolledPeople}</span>
+            </div>
           </div>
         )}
       </div>

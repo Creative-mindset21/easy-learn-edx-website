@@ -19,8 +19,8 @@ import pricingImg7 from "../assets/pricing1.webp";
 export const aboutData = [
   {
     img: blob1,
-    title: "Tailored Learning for Every Student",
-    body: "Every child is unique, and so is their education. Choose between one-to-one or small group sessions for a personalized approach",
+    title: "The learning is tailored to every student's needs",
+    body: "This is because every child is unique, so their education should also be distinct",
   },
 
   {

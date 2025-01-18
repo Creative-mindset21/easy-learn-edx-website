@@ -71,6 +71,26 @@
   border-bottom: 1px solid #b2bbc633;
 }
 
+.box .imgs {
+  display: flex;
+  flex-direction: row;
+  gap: 0.3rem;
+  align-items: center;
+}
+
+.imgs > span {
+  font-size: 0.8rem;
+  color: #1d242d;
+  font-weight: 600;
+}
+
+.imgs > img {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
 /* !===== MOBILE PHONES ===== */
 @media (max-width: 559px) {
   .oneToOne > h2,

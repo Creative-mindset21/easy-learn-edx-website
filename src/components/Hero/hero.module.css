@@ -92,18 +92,20 @@
 @media (max-width: 559px) {
   .hero {
     height: 75vh;
-    align-items: start;
     padding: 35% 10%;
   }
 
   .left {
-    align-items: flex-start;
-    text-align: left;
     gap: 1.5rem;
   }
 
+  .left > div {
+    align-items: center;
+    gap: 2rem;
+  }
+
   .left > h1 {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
   }
 
   .left > div p {
