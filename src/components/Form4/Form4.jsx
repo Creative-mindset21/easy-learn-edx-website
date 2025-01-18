@@ -1,5 +1,4 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable react/react-in-jsx-scope */
+import React from "react";
 import { useState } from "react";
 import css from "./form4.module.css";
 import FormHeader from "../FormHeader/FormHeader";
@@ -13,6 +12,8 @@ const Form4 = ({ formData, prevPage, setFormData }) => {
   //! ===== HANDLE FORM SUBMIT ===== //
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    localStorage.setItem("isRegistered", "true");
 
     if (
       formData.specialEducationNeeds === "yes" &&
